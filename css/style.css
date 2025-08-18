@@ -13,3 +13,45 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: var(--cor-fundo);
+    /* Centralizando o componente na página para visualização*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*2. Estilos do Componente Principal: .card*/
+.card {
+    background-color: var(--cor-branco);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 320px;
+/*Aqui que começa a magica da transformação */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    overflow: hidden;
+    text-align: center;
+
+}
+
+/*3. Efeito de Hover no card */
+.card:hover {
+    transform: translateY(+10px); /*Movimenta o card para cima em 10px */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2)
+}
+
+/*4. Estilos da Imagem do Card */
+.card_image-container{
+    width: 100%;
+    height: 350px;/*Altura fixa para o container da imagem */
+}
+
+.card_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* Cobre todo o container mantendo a proporçã/ garante que a imagem cubra o espaço sem distorcer*/
+}
+
